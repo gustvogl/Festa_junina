@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arraiá Digital - Barraca de Comidas</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&amp;family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#6b4b00",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#00657a",
+                      "on-primary-fixed": "#410007",
+                      "inverse-on-surface": "#ffede2",
+                      "primary-container": "#db313f",
+                      "secondary-container": "#ffb702",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "outline": "#8f6f6e",
+                      "surface-container-low": "#fff1e9",
+                      "background": "#fff8f5",
+                      "secondary-fixed": "#ffdea9",
+                      "on-tertiary-fixed": "#001f27",
+                      "tertiary-container": "#007f99",
+                      "on-surface": "#28180b",
+                      "on-background": "#28180b",
+                      "surface-container-highest": "#fbddc7",
+                      "surface-variant": "#fbddc7",
+                      "on-tertiary-container": "#fafdff",
+                      "primary": "#b7102a",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "secondary": "#7d5800",
+                      "inverse-surface": "#3f2d1e",
+                      "on-primary-container": "#fffbff",
+                      "surface": "#fff8f5",
+                      "on-tertiary-fixed-variant": "#004e5f",
+                      "secondary-fixed-dim": "#ffba27",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#b2ebff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#92001c",
+                      "primary-fixed-dim": "#ffb3b1",
+                      "surface-container": "#ffeadc",
+                      "primary-fixed": "#ffdad8",
+                      "on-secondary-fixed-variant": "#5e4100",
+                      "surface-tint": "#bb152c",
+                      "surface-container-high": "#ffe3cf",
+                      "on-secondary-fixed": "#271900",
+                      "surface-dim": "#f2d4bf",
+                      "on-surface-variant": "#5b403f",
+                      "inverse-primary": "#ffb3b1",
+                      "outline-variant": "#e4bebc",
+                      "surface-bright": "#fff8f5",
+                      "tertiary-fixed-dim": "#69d4f4"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "container-max": "1200px",
+                      "margin-edge": "32px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-lg": [
+                              "Bricolage Grotesque"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-xl": [
+                              "Bricolage Grotesque"
+                      ],
+                      "label-caps": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-md": [
+                              "Bricolage Grotesque"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "label-caps": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Texture overlay for that rustic feel */
+        .texture-overlay {
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.05"/></svg>');
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Global Texture Overlay -->
+<div class="fixed inset-0 texture-overlay z-[-1]"></div>
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-unit h-20 bg-surface dark:bg-surface-dim bg-surface-container-highest border-b-4 border-secondary shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)]">
+<button aria-label="Menu" class="p-2 text-primary dark:text-primary-fixed-dim hover:rotate-2 hover:scale-105 transition-transform active:-rotate-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+<h1 class="font-headline-xl text-headline-xl text-primary dark:text-primary-fixed-dim tracking-tight">Arraiá Digital</h1>
+<button class="p-2 text-primary dark:text-primary-fixed-dim hover:rotate-2 hover:scale-105 transition-transform active:-rotate-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">token</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-container-max mx-auto px-4 sm:px-gutter pt-28 pb-40">
+<!-- Chalkboard Header Section -->
+<section class="relative bg-inverse-surface rounded-xl p-6 mb-8 shadow-[8px_8px_0px_0px_rgba(74,55,40,0.4)] border-4 border-secondary rotate-1 transform">
+<!-- Bandeirinhas decorative top -->
+<div class="absolute -top-6 left-0 right-0 flex justify-center space-x-2 overflow-hidden">
+<div class="w-8 h-10 bg-primary rotate-45 transform origin-bottom-left shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)]"></div>
+<div class="w-8 h-10 bg-secondary-container rotate-45 transform origin-bottom-left shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)] translate-y-2"></div>
+<div class="w-8 h-10 bg-tertiary rotate-45 transform origin-bottom-left shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)]"></div>
+<div class="w-8 h-10 bg-primary rotate-45 transform origin-bottom-left shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)] translate-y-2"></div>
+<div class="w-8 h-10 bg-secondary-container rotate-45 transform origin-bottom-left shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)]"></div>
+</div>
+<div class="text-center mt-4">
+<h2 class="font-headline-lg text-headline-lg text-secondary-fixed mb-2 font-bold uppercase tracking-widest" style="text-shadow: 2px 2px 0px rgba(0,0,0,0.5);">Cardápio</h2>
+<p class="font-body-lg text-body-lg text-inverse-on-surface">Escolha suas delícias e pague com Fichas!</p>
+</div>
+<!-- Chita Decorative border bottom -->
+<div class="absolute -bottom-2 left-4 right-4 h-4 bg-primary-container rounded-full opacity-80 border-2 border-dashed border-secondary shadow-inner"></div>
+</section>
+<!-- Category Tabs (Wood Planks) -->
+<nav class="flex overflow-x-auto pb-4 mb-6 space-x-4 snap-x hide-scrollbar">
+<!-- Active Tab -->
+<button class="snap-start flex-none px-6 py-3 bg-secondary text-on-secondary font-label-caps text-label-caps rounded border-2 border-on-secondary-container shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)] transform -rotate-1 relative group">
+<span class="absolute top-1 left-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-50"></span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-50"></span>
+<span class="absolute bottom-1 left-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-50"></span>
+<span class="absolute bottom-1 right-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-50"></span>
+                Salgados
+            </button>
+<!-- Inactive Tabs -->
+<button class="snap-start flex-none px-6 py-3 bg-surface-variant text-on-surface font-label-caps text-label-caps rounded border-2 border-outline shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)] transform rotate-1 hover:bg-surface-container-high transition-colors relative">
+<span class="absolute top-1 left-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-30"></span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-30"></span>
+<span class="absolute bottom-1 left-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-30"></span>
+<span class="absolute bottom-1 right-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-30"></span>
+                Doces
+            </button>
+<button class="snap-start flex-none px-6 py-3 bg-surface-variant text-on-surface font-label-caps text-label-caps rounded border-2 border-outline shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)] transform -rotate-2 hover:bg-surface-container-high transition-colors relative">
+<span class="absolute top-1 left-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-30"></span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-30"></span>
+<span class="absolute bottom-1 left-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-30"></span>
+<span class="absolute bottom-1 right-1 w-1.5 h-1.5 bg-on-surface rounded-full opacity-30"></span>
+                Bebidas
+            </button>
+</nav>
+<!-- Product Grid (Salgados) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Item Card 1 -->
+<article class="bg-surface-container rounded-xl border-2 border-outline p-4 flex flex-col shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)] relative bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAiLz4KPHBhdGggZD0iTTAgMEwyIDJNMCA0TDIgMiIgIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')]">
+<!-- Image Container -->
+<div class="w-full h-40 bg-surface-dim rounded-lg mb-4 overflow-hidden border-2 border-outline shadow-inner relative">
+<img alt="Pamonha Ilustrativa" class="w-full h-full object-cover" data-alt="A vibrant, stylized illustration of a traditional Brazilian Pamonha, wrapped in bright green corn husks and tied with a rustic string. The food rests on a textured wooden table surface, illuminated by warm, inviting, festive lighting that creates a cozy light-mode aesthetic. The color palette emphasizes rich yellows, greens, and warm earthy browns, fitting a high-quality artisanal food catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqsvplRNxQNR_XL29WbQ3gcOuFpIvx7pqD3JvqxK-FWMgXY6vHxAuVJeU0pUKolFMmcJtHnyCKq7sr4lrfXPlfqQLXpHsnXO0aR8x3MkDq_G0Jj6XZt8k5NDjpXC3R9QBX1xSNtoKKvX2TutbwkJ7W9bEshXF1PeS3XvlpmrI1vM2cIfyiScUrLBXiCiM9uy58i3Ugb59YM35asfcHVT7D2Y7UNh4bD4-98yNl58yloQSRL1AHkIrxv2sttydhvYXxPEdkWdXN-X2J"/>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-2 py-1 rounded shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)] transform rotate-3">
+<span class="material-symbols-outlined text-sm align-middle mr-1">token</span>3
+                    </div>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Pamonha Tradicional</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Feita com milho verde fresquinho, doce na medida certa.</p>
+</div>
+<button class="mt-4 w-full py-3 bg-primary text-on-primary font-label-caps text-label-caps rounded border-2 border-surface-tint shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)] flex items-center justify-center gap-2 hover:bg-primary-container hover:text-on-primary-container transition-colors transform hover:-translate-y-1 active:translate-y-0">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                    Adicionar
+                </button>
+</article>
+<!-- Item Card 2 -->
+<article class="bg-surface-container rounded-xl border-2 border-outline p-4 flex flex-col shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)] relative">
+<div class="w-full h-40 bg-surface-dim rounded-lg mb-4 overflow-hidden border-2 border-outline shadow-inner relative">
+<img alt="Milho Cozido" class="w-full h-full object-cover" data-alt="A beautiful, close-up illustrative photo of boiled corn on the cob (Milho Cozido), generously brushed with melting butter. The corn sits on a piece of rustic parchment paper over a dark wooden crate. The lighting is bright and warm, emphasizing the golden yellow kernels against the rustic background, perfectly capturing a festive, high-contrast, tactile design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIeq-JVwKv3sJCrcZWqyLC6gy-0b6M12pod1QkLTI2QDuAzF0A-bgW0E0zmpgBF25A4K6_a8zCW0rNeKTT3UjLMKr8TlZ4eJOB5X81fO3-Td2EqSGvtEYHBB-An4gG9VHQOOkRn7ctwRPJG98xsuf90mMLs0Ng-QpnBxN7c6KzLs_GQhYS0Q9-y71YjdL_LbCJ3x4AWcuOtZsQFY3MpDfoBBuA3U8nPCGCwkaNtjW1YvWzvrR4Z3XHBmys6_WMIL1WBoNESF4aAcd3"/>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-2 py-1 rounded shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)] transform -rotate-2">
+<span class="material-symbols-outlined text-sm align-middle mr-1">token</span>2
+                    </div>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Milho Cozido</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Com manteiga derretendo, sabor da roça.</p>
+</div>
+<button class="mt-4 w-full py-3 bg-surface-variant text-on-surface font-label-caps text-label-caps rounded border-2 border-outline shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)] flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-colors transform hover:-translate-y-1 active:translate-y-0">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                    Adicionar
+                </button>
+</article>
+<!-- Item Card 3 -->
+<article class="bg-surface-container rounded-xl border-2 border-outline p-4 flex flex-col shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)] relative">
+<div class="w-full h-40 bg-surface-dim rounded-lg mb-4 overflow-hidden border-2 border-outline shadow-inner relative">
+<img alt="Pastel" class="w-full h-full object-cover" data-alt="A vibrant, stylized illustration of a classic Brazilian Pastel, golden brown and crispy, resting in a woven straw basket lined with colorful Chita fabric. The environment is festive and well-lit, evoking a bustling outdoor market stall. The image relies on warm, appetizing tones of gold, crisp yellows, and the contrasting vibrant floral patterns of the fabric beneath it." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHk55TU1CD1LCj1kpY9sTuwbjd28o1b9xfR-esOSvtOR2ZlCssoNC_Uad_YfIVU0m7JNvfyfj8nk_Jqr9it3zz6WnpAMo-Tmz18_i8n8LewyED1KzKZyxqGOOwwLd7itxFmVUI-O4N4wpgVvRzp1tIeNceqDRRUcuRvKiolY4PUsJ6fJjZf3bHPuI32AuOy0G-A_nEDbTB516aRmE91pZ5a77E_1hYHxZNgmm7oXa1wYH319OJzIl6jqDo-1384g3YrFV9LC4CPK6N"/>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-2 py-1 rounded shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)] transform rotate-1">
+<span class="material-symbols-outlined text-sm align-middle mr-1">token</span>4
+                    </div>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Pastel de Feira</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Carne, Queijo ou Pizza. Bem crocante e recheado.</p>
+</div>
+<button class="mt-4 w-full py-3 bg-surface-variant text-on-surface font-label-caps text-label-caps rounded border-2 border-outline shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)] flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-colors transform hover:-translate-y-1 active:translate-y-0">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                    Adicionar
+                </button>
+</article>
+</div>
+</main>
+<script src="app.js"></script>
+<!-- Floating Cart Summary -->
+<div class="fixed bottom-[96px] left-0 w-full px-4 sm:px-gutter z-40 pointer-events-none">
+<div class="max-w-container-max mx-auto flex justify-end">
+<!-- Cart Panel -->
+<div class="pointer-events-auto bg-tertiary-container text-on-tertiary-container rounded-xl border-4 border-inverse-surface shadow-[8px_8px_0px_0px_rgba(74,55,40,0.8)] p-4 flex items-center justify-between gap-4 transform -rotate-1 max-w-sm w-full">
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span id="cart-count" class="absolute -top-2 -right-2 bg-primary text-on-primary font-label-caps text-[10px] w-5 h-5 flex items-center justify-center rounded-full border-2 border-tertiary-container">1</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps opacity-90">Total</p>
+<p id="cart-total" class="font-headline-md text-headline-md flex items-center">
+                            3 <span class="material-symbols-outlined text-sm ml-1">token</span>
+</p>
+</div>
+</div>
+<button id="pay-now" class="bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-4 py-3 rounded border-2 border-secondary shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] hover:bg-secondary hover:text-on-secondary transition-colors whitespace-nowrap">
+                    Pagar Agora
+                </button>
+</div>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-secondary dark:bg-on-secondary-container border-t-4 border-on-secondary-container shadow-[0px_-4px_0px_0px_rgba(74,55,40,0.4)]">
+<!-- Início -->
+<a href="inicio.html" class="flex flex-col items-center justify-center text-on-secondary p-2 -rotate-1 hover:bg-tertiary-container hover:text-on-tertiary-container transition-transform duration-150 rounded-lg group">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">home</span>
+<span class="font-label-caps text-label-caps">Início</span>
+</a>
+<!-- Meu Perfil -->
+<a href="perfil.html" class="flex flex-col items-center justify-center text-on-secondary p-2 rotate-1 hover:bg-tertiary-container hover:text-on-tertiary-container transition-transform duration-150 rounded-lg group">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">person</span>
+<span class="font-label-caps text-label-caps">Meu Perfil</span>
+</a>
+<!-- Comida (ACTIVE) -->
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-lg p-2 rotate-1 scale-110 transition-transform duration-150 shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)]">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-label-caps text-label-caps">Comida</span>
+</button>
+<!-- Correio -->
+<a href="correio.html" class="flex flex-col items-center justify-center text-on-secondary p-2 -rotate-1 hover:bg-tertiary-container hover:text-on-tertiary-container transition-transform duration-150 rounded-lg group">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">mail</span>
+<span class="font-label-caps text-label-caps">Correio</span>
+</a>
+<!-- Barracas -->
+<a href="jogos.html" class="flex flex-col items-center justify-center text-on-secondary p-2 -rotate-1 hover:bg-tertiary-container hover:text-on-tertiary-container transition-transform duration-150 rounded-lg group">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">storefront</span>
+<span class="font-label-caps text-label-caps">Barracas</span>
+</a>
+</nav>
+</body></html>

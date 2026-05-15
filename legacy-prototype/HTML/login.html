@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Arraiá Digital - Login</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&amp;family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#bb152c",
+                        "surface": "#fff8f5",
+                        "secondary": "#7d5800",
+                        "on-primary-fixed": "#410007",
+                        "inverse-primary": "#ffb3b1",
+                        "surface-bright": "#fff8f5",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#69d4f4",
+                        "on-secondary-fixed": "#271900",
+                        "on-secondary-fixed-variant": "#5e4100",
+                        "on-surface-variant": "#5b403f",
+                        "tertiary-container": "#007f99",
+                        "primary-fixed": "#ffdad8",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#b2ebff",
+                        "surface-dim": "#f2d4bf",
+                        "background": "#fff8f5",
+                        "surface-container-low": "#fff1e9",
+                        "primary-container": "#db313f",
+                        "inverse-on-surface": "#ffede2",
+                        "secondary-fixed-dim": "#ffba27",
+                        "surface-container-highest": "#fbddc7",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#ffb702",
+                        "on-background": "#28180b",
+                        "outline": "#8f6f6e",
+                        "outline-variant": "#e4bebc",
+                        "on-tertiary-fixed-variant": "#004e5f",
+                        "on-surface": "#28180b",
+                        "on-tertiary-fixed": "#001f27",
+                        "on-secondary-container": "#6b4b00",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#92001c",
+                        "surface-variant": "#fbddc7",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#ffdea9",
+                        "surface-container": "#ffeadc",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#ffe3cf",
+                        "primary": "#b7102a",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#3f2d1e",
+                        "tertiary": "#00657a",
+                        "on-tertiary-container": "#fafdff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "margin-edge": "32px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": [
+                            "Be Vietnam Pro"
+                        ],
+                        "headline-xl": [
+                            "Bricolage Grotesque"
+                        ],
+                        "body-md": [
+                            "Be Vietnam Pro"
+                        ],
+                        "headline-md": [
+                            "Bricolage Grotesque"
+                        ],
+                        "body-lg": [
+                            "Be Vietnam Pro"
+                        ],
+                        "headline-lg": [
+                            "Bricolage Grotesque"
+                        ]
+                    },
+                    "fontSize": {
+                        "label-caps": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "headline-xl": [
+                            "48px",
+                            {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-lg": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "fontWeight": "700"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Subtle texture for the background */
+        .bg-straw-texture {
+            background-image:
+                linear-gradient(45deg, rgba(143, 111, 110, 0.05) 25%, transparent 25%, transparent 75%, rgba(143, 111, 110, 0.05) 75%, rgba(143, 111, 110, 0.05)),
+                linear-gradient(45deg, rgba(143, 111, 110, 0.05) 25%, transparent 25%, transparent 75%, rgba(143, 111, 110, 0.05) 75%, rgba(143, 111, 110, 0.05));
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        /* Decorative Bunting CSS */
+        .bunting-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            display: flex;
+            justify-content: space-around;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+            border-bottom: 2px solid #7d5800;
+            /* Jute rope */
+            border-radius: 0 0 50% 50% / 0 0 20px 20px;
+        }
+
+        .flag {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 40px solid;
+            transform-origin: top center;
+            animation: swing 3s ease-in-out infinite alternate;
+        }
+
+        .flag:nth-child(1n) {
+            border-top-color: #b7102a;
+            animation-delay: 0.1s;
+        }
+
+        .flag:nth-child(2n) {
+            border-top-color: #007f99;
+            animation-delay: 0.5s;
+        }
+
+        .flag:nth-child(3n) {
+            border-top-color: #ffb702;
+            animation-delay: 0.2s;
+        }
+
+        .flag:nth-child(4n) {
+            border-top-color: #b7102a;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes swing {
+            0% {
+                transform: rotate(-5deg);
+            }
+
+            100% {
+                transform: rotate(5deg);
+            }
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface bg-straw-texture text-on-surface min-h-screen flex items-center justify-center relative font-body-md text-body-md overflow-x-hidden">
+    <!-- Decorative Bunting (Bandeirinhas) -->
+    <div aria-hidden="true" class="absolute top-0 w-full px-8 pt-2 flex justify-between z-0 opacity-80">
+        <!-- Simulating a hanging rope with flags -->
+        <svg class="absolute top-0 left-0" height="80" preserveaspectratio="none" width="100%">
+            <path d="M0,20 Q25%,60 50%,20 T100%,20" fill="transparent" stroke="#7d5800" stroke-dasharray="4 2"
+                stroke-width="2"></path>
+        </svg>
+        <div class="flex w-full justify-around mt-4">
+            <div
+                class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[40px] border-t-primary origin-top rotate-3 drop-shadow-md">
+            </div>
+            <div
+                class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[40px] border-t-tertiary origin-top -rotate-6 drop-shadow-md mt-4">
+            </div>
+            <div
+                class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[40px] border-t-secondary-container origin-top rotate-2 drop-shadow-md mt-2">
+            </div>
+            <div
+                class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[40px] border-t-primary origin-top -rotate-3 drop-shadow-md mt-5">
+            </div>
+            <div
+                class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[40px] border-t-tertiary origin-top rotate-6 drop-shadow-md mt-1">
+            </div>
+            <div
+                class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[40px] border-t-secondary-container origin-top -rotate-2 drop-shadow-md mt-4">
+            </div>
+            <div
+                class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[40px] border-t-primary origin-top rotate-4 drop-shadow-md">
+            </div>
+        </div>
+    </div>
+    <!-- Main Login Canvas -->
+    <main class="w-full max-w-md mx-4 relative z-10">
+        <!-- Login Card -->
+        <div
+            class="bg-surface-container-highest rounded-xl border-4 border-secondary shadow-[8px_8px_0px_0px_rgba(74,55,40,0.4)] relative overflow-hidden flex flex-col">
+            <!-- Chita Pattern Header Strip -->
+            <div class="h-6 w-full bg-cover bg-center border-b-2 border-secondary"
+                data-alt="A vibrant, seamless digital texture mimicking traditional Brazilian 'Chita' fabric. The pattern is densely packed with oversized, expressive floral motifs in bright primary colors like deep red, sunshine yellow, and teal blue against a warm background. The lighting is flat and illustrative, creating a playful, handmade folk-art aesthetic suitable for a festive UI border."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBn5VlG2Bn_4Ahqb8a5-QYMhr1rsDpEVxV1cDSIpHKsd_lgQZdbyjNtEEOwEsfeuN9JeAnTrDRFNnKBNOW-N9-Y2BkaBAFgOj-wynmjuenxFebTb5Js0iCftXHJHwmKEXdg3DS1KZIayeY7ZwZNL9yBxMFqycKizAtezat1nAi3_xqWUygmI_VyaIWfCAW52aTLF55_C_ufUa_srlmHyizK-IeWygPINpqtRrfCtj9GICNVOuncIllw8dzbEiscowv1i4l2-OsHJL2');">
+            </div>
+            <div class="p-8 sm:p-10 flex flex-col items-center">
+                <!-- Straw Hat Icon / Decoration -->
+                <div
+                    class="w-24 h-24 mb-4 rounded-full border-4 border-secondary overflow-hidden shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)] bg-surface-container-lowest flex items-center justify-center rotate-3">
+                    <img alt="Chapéu de Palha" class="w-full h-full object-cover"
+                        data-alt="A close-up, high-quality digital illustration of a rustic woven straw hat, typical of Brazilian Festa Junina attire. The hat features a frayed brim and a colorful checkered ribbon tied around the base. It is placed against a plain light beige background with soft, natural lighting that highlights the textured weave of the straw. The mood is warm, festive, and traditional."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdwtOo0EHzcvYVfau8sa0iFsqflJLNXsudP2Af8TVNKzmyFb28mE5Y8sqNfcovKkCxG7nbfZPv3Kl1rPgkdsA7Cpb4qNmAF1elyXZbsxgMuopqKSlIuzAycK177GHyHwWnst4PxWxx_vpXjOHnvILfZzucyozurQvdHPlXMJgAxpviHStgxWZrWsDfvoXqnQlXB2S1yURnchKSw7wJniD2p1BJEn3qvg1EMvSL5Y2oB3ATmmuXFOjDyhcm6QDWIuJq6lmb6adB6rjL" />
+                </div>
+                <!-- Header -->
+                <h1
+                    class="font-headline-xl text-headline-xl text-primary text-center mb-8 drop-shadow-sm transform -rotate-1">
+                    Arraiá Digital
+                </h1>
+                <!-- Login Form -->
+                <form class="w-full space-y-6">
+                    <!-- Input: Email/Apelido -->
+                    <div class="space-y-2">
+                        <label class="block font-label-caps text-label-caps text-on-surface ml-1" for="username">
+                            E-mail ou Apelido Caipira
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-secondary">
+                                <span class="material-symbols-outlined" data-icon="person">person</span>
+                            </span>
+                            <input
+                                class="w-full pl-10 pr-4 py-3 bg-surface-container-lowest border-2 border-secondary rounded-lg font-body-lg text-body-lg text-on-surface placeholder-outline-variant focus:outline-none focus:border-primary focus:ring-0 shadow-[2px_2px_0px_0px_rgba(74,55,40,0.2)] transition-shadow"
+                                id="username" name="username" placeholder="ex: jao_das_neves" type="text" />
+                        </div>
+                    </div>
+                    <!-- Input: Senha -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-baseline">
+                            <label class="block font-label-caps text-label-caps text-on-surface ml-1" for="password">
+                                Senha (Segredo da Vó)
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-secondary">
+                                <span class="material-symbols-outlined" data-icon="lock">lock</span>
+                            </span>
+                            <input
+                                class="w-full pl-10 pr-4 py-3 bg-surface-container-lowest border-2 border-secondary rounded-lg font-body-lg text-body-lg text-on-surface placeholder-outline-variant focus:outline-none focus:border-primary focus:ring-0 shadow-[2px_2px_0px_0px_rgba(74,55,40,0.2)] transition-shadow"
+                                id="password" name="password" placeholder="••••••••" type="password" />
+                        </div>
+                        <!-- Forgot Password Link -->
+                        <div class="text-right mt-1">
+                            <a class="font-label-caps text-label-caps text-primary hover:text-secondary underline decoration-2 underline-offset-2 transition-colors"
+                                href="index.html">
+                                Esqueci minha senha
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Submit Button (Wooden Plank Style) -->
+                    <button
+                        class="w-full mt-8 group relative bg-secondary hover:bg-on-secondary-fixed-variant text-on-secondary font-headline-md text-headline-md py-4 px-6 rounded-lg border-4 border-on-surface shadow-[4px_4px_0px_0px_rgba(74,55,40,0.6)] hover:shadow-[6px_6px_0px_0px_rgba(74,55,40,0.6)] transition-all transform hover:-rotate-1 hover:scale-[1.02] flex items-center justify-center overflow-hidden"
+                        type="submit">
+                        <!-- Wood Texture Overlay -->
+                        <div class="absolute inset-0 opacity-10 pointer-events-none"
+                            style="background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, #000 2px, #000 4px);">
+                        </div>
+                        <!-- Nails -->
+                        <div
+                            class="absolute top-2 left-2 w-2.5 h-2.5 bg-surface-dim rounded-full border border-on-surface shadow-inner">
+                        </div>
+                        <div
+                            class="absolute top-2 right-2 w-2.5 h-2.5 bg-surface-dim rounded-full border border-on-surface shadow-inner">
+                        </div>
+                        <div
+                            class="absolute bottom-2 left-2 w-2.5 h-2.5 bg-surface-dim rounded-full border border-on-surface shadow-inner">
+                        </div>
+                        <div
+                            class="absolute bottom-2 right-2 w-2.5 h-2.5 bg-surface-dim rounded-full border border-on-surface shadow-inner">
+                        </div>
+                        <span class="relative z-10 flex items-center gap-2 drop-shadow-md">
+                            Entrar na Festança!
+                            <span class="material-symbols-outlined text-[28px]"
+                                data-icon="local_fire_department">local_fire_department</span>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <!-- Registration Link -->
+        <div
+            class="mt-8 text-center bg-surface-container-low border-2 border-dashed border-outline-variant p-4 rounded-xl rotate-1 shadow-sm">
+            <p class="font-body-md text-body-md text-on-surface">
+                Ainda não é de casa? <br />
+                <a class="font-headline-md text-headline-md text-secondary hover:text-primary underline decoration-2 underline-offset-4 mt-1 inline-block transition-colors"
+                    href="/index.html">
+                    Puxe uma cadeira e cadastre-se!
+                </a>
+            </p>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

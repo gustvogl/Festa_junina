@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Correio do Amor - Arraiá Digital</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&amp;family=Be+Vietnam+Pro:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#6b4b00",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#00657a",
+                        "on-primary-fixed": "#410007",
+                        "inverse-on-surface": "#ffede2",
+                        "primary-container": "#db313f",
+                        "secondary-container": "#ffb702",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline": "#8f6f6e",
+                        "surface-container-low": "#fff1e9",
+                        "background": "#fff8f5",
+                        "secondary-fixed": "#ffdea9",
+                        "on-tertiary-fixed": "#001f27",
+                        "tertiary-container": "#007f99",
+                        "on-surface": "#28180b",
+                        "on-background": "#28180b",
+                        "surface-container-highest": "#fbddc7",
+                        "surface-variant": "#fbddc7",
+                        "on-tertiary-container": "#fafdff",
+                        "primary": "#b7102a",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "secondary": "#7d5800",
+                        "inverse-surface": "#3f2d1e",
+                        "on-primary-container": "#fffbff",
+                        "surface": "#fff8f5",
+                        "on-tertiary-fixed-variant": "#004e5f",
+                        "secondary-fixed-dim": "#ffba27",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#b2ebff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#92001c",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "surface-container": "#ffeadc",
+                        "primary-fixed": "#ffdad8",
+                        "on-secondary-fixed-variant": "#5e4100",
+                        "surface-tint": "#bb152c",
+                        "surface-container-high": "#ffe3cf",
+                        "on-secondary-fixed": "#271900",
+                        "surface-dim": "#f2d4bf",
+                        "on-surface-variant": "#5b403f",
+                        "inverse-primary": "#ffb3b1",
+                        "outline-variant": "#e4bebc",
+                        "surface-bright": "#fff8f5",
+                        "tertiary-fixed-dim": "#69d4f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "container-max": "1200px",
+                        "margin-edge": "32px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg": ["Bricolage Grotesque"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-xl": ["Bricolage Grotesque"],
+                        "label-caps": ["Be Vietnam Pro"],
+                        "headline-md": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-caps": ["14px", { "lineHeight": "20px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .chita-pattern {
+            background-image: repeating-linear-gradient(45deg, #b7102a 25%, transparent 25%, transparent 75%, #b7102a 75%, #b7102a), repeating-linear-gradient(45deg, #b7102a 25%, #fff8f5 25%, #fff8f5 75%, #b7102a 75%, #b7102a);
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+        }
+
+        .wood-texture {
+            background-color: #3f2d1e;
+            background-image: repeating-linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 10px);
+        }
+
+        /* Scrollbar styling for horizontal list */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-background font-body-md min-h-screen relative pb-28 pt-24 selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-unit h-20 bg-surface border-b-4 border-secondary shadow-[4px_4px_0px_0px_rgba(74,55,40,0.4)]">
+        <button aria-label="Menu"
+            class="text-primary hover:rotate-2 hover:scale-105 transition-transform flex items-center justify-center p-2 rounded-full focus:outline-none focus:ring-4 focus:ring-secondary-container">
+            <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+        </button>
+        <h1 class="font-headline-lg text-headline-lg text-primary text-center flex-1">
+            Arraiá Digital
+        </h1>
+        <button
+            class="text-primary hover:rotate-2 hover:scale-105 transition-transform flex items-center justify-center p-2 rounded-full focus:outline-none focus:ring-4 focus:ring-secondary-container">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">token</span>
+        </button>
+    </header>
+    <main class="max-w-container-max mx-auto px-gutter flex flex-col gap-8">
+        <!-- Page Header -->
+        <div class="text-center relative">
+            <h2
+                class="font-headline-xl text-headline-xl text-primary inline-block relative z-10 bg-surface px-4 py-2 border-4 border-secondary shadow-[8px_8px_0px_0px_rgba(74,55,40,0.4)] rotate-[-1deg]">
+                Correio do Amor
+                <span class="material-symbols-outlined absolute -top-4 -right-4 text-primary-container rotate-12"
+                    style="font-size: 48px; font-variation-settings: 'FILL' 1;">favorite</span>
+            </h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mt-4">Mande um recadinho, um chamego ou um
+                docinho para quem fez seu coração pular a fogueira!</p>
+        </div>
+        <!-- Main Content Area: Asymmetric Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Compose Form (Primary Action) -->
+            <div
+                class="lg:col-span-7 bg-surface-container-low border-4 border-secondary rounded-xl shadow-[8px_8px_0px_0px_rgba(74,55,40,0.4)] overflow-hidden relative">
+                <!-- Chita Decorative Header -->
+                <div class="h-4 w-full chita-pattern border-b-4 border-secondary"></div>
+                <form class="p-6 flex flex-col gap-6">
+                    <!-- Recipient Search -->
+                    <div class="flex flex-col gap-2">
+                        <label class="font-label-caps text-label-caps text-secondary flex items-center gap-2"
+                            for="recipient">
+                            <span class="material-symbols-outlined">search</span> Para quem? (Apelido)
+                        </label>
+                        <input
+                            class="w-full bg-surface-container-lowest border-2 border-secondary rounded-lg px-4 py-3 font-body-lg text-on-surface focus:ring-4 focus:ring-primary-container focus:border-primary focus:outline-none shadow-[inset_2px_2px_0px_0px_rgba(74,55,40,0.2)] placeholder:text-on-surface-variant"
+                            id="recipient" placeholder="Ex: Maria Pipoca..." type="text" />
+                    </div>
+                    <!-- Message Area -->
+                    <div class="flex flex-col gap-2">
+                        <label class="font-label-caps text-label-caps text-secondary flex items-center gap-2"
+                            for="message">
+                            <span class="material-symbols-outlined">edit_document</span> Seu Recadinho
+                        </label>
+                        <textarea
+                            class="w-full bg-surface-container-lowest border-2 border-secondary rounded-lg px-4 py-3 font-body-lg text-on-surface focus:ring-4 focus:ring-primary-container focus:border-primary focus:outline-none shadow-[inset_2px_2px_0px_0px_rgba(74,55,40,0.2)] placeholder:text-on-surface-variant resize-none"
+                            id="message" placeholder="Escreva aqui seu bilhete..." rows="4"></textarea>
+                    </div>
+                    <!-- Message Styles / Options -->
+                    <div class="flex flex-col gap-3">
+                        <span class="font-label-caps text-label-caps text-secondary">Estilo de Envio</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <!-- Option 1: Direct -->
+                            <label
+                                class="relative flex items-center justify-center p-3 border-2 border-secondary rounded-lg bg-surface cursor-pointer hover:bg-surface-variant transition-colors group has-[:checked]:bg-primary-container has-[:checked]:border-primary has-[:checked]:text-on-primary-container shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)]">
+                                <input checked="" class="peer sr-only" name="message_style" type="radio"
+                                    value="direct" />
+                                <div class="flex flex-col items-center gap-1">
+                                    <span
+                                        class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform peer-checked:text-primary">person</span>
+                                    <span class="font-label-caps text-label-caps">Direto</span>
+                                </div>
+                            </label>
+                            <!-- Option 2: Anonymous -->
+                            <label
+                                class="relative flex items-center justify-center p-3 border-2 border-secondary rounded-lg bg-surface cursor-pointer hover:bg-surface-variant transition-colors group has-[:checked]:bg-secondary-container has-[:checked]:border-secondary has-[:checked]:text-on-secondary-container shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)]">
+                                <input class="peer sr-only" name="message_style" type="radio" value="anonymous" />
+                                <div class="flex flex-col items-center gap-1">
+                                    <span
+                                        class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform peer-checked:text-secondary">masks</span>
+                                    <span class="font-label-caps text-label-caps">Anônimo</span>
+                                </div>
+                            </label>
+                            <!-- Option 3: With Mimo -->
+                            <label
+                                class="relative flex items-center justify-center p-3 border-2 border-primary rounded-lg bg-primary-fixed cursor-pointer hover:bg-primary-fixed-dim transition-colors group has-[:checked]:bg-primary has-[:checked]:border-inverse-surface has-[:checked]:text-on-primary shadow-[2px_2px_0px_0px_rgba(74,55,40,0.4)]">
+                                <input class="peer sr-only" name="message_style" type="radio" value="mimo" />
+                                <div class="flex flex-col items-center gap-1">
+                                    <span
+                                        class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform peer-checked:text-on-primary"
+                                        style="font-variation-settings: 'FILL' 1;">cake</span>
+                                    <span class="font-label-caps text-label-caps text-center">Com Mimo<br /><span
+                                            class="text-xs font-normal opacity-90">-1 Ficha</span></span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Submit Button -->
+                    <button
+                        class="mt-4 wood-texture text-inverse-on-surface border-4 border-secondary rounded-lg py-4 px-8 font-headline-md text-headline-md shadow-[6px_6px_0px_0px_rgba(74,55,40,0.8)] hover:rotate-1 hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(74,55,40,0.8)] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_rgba(74,55,40,0.8)] transition-all flex items-center justify-center gap-3 relative overflow-hidden group"
+                        type="button">
+                        <!-- Nails -->
+                        <div class="absolute top-2 left-2 w-2 h-2 bg-black rounded-full opacity-60 shadow-inner"></div>
+                        <div class="absolute top-2 right-2 w-2 h-2 bg-black rounded-full opacity-60 shadow-inner"></div>
+                        <div class="absolute bottom-2 left-2 w-2 h-2 bg-black rounded-full opacity-60 shadow-inner">
+                        </div>
+                        <div class="absolute bottom-2 right-2 w-2 h-2 bg-black rounded-full opacity-60 shadow-inner">
+                        </div>
+                        <span class="material-symbols-outlined group-hover:rotate-12 transition-transform"
+                            style="font-variation-settings: 'FILL' 1;">send</span>
+                        Mandar Correio
+                    </button>
+                </form>
+            </div>
+            <!-- Side Panel: Stats & Pinned Notes -->
+            <div class="lg:col-span-5 flex flex-col gap-6">
+                <!-- Received Card -->
+                <div
+                    class="bg-[#f2d4bf] border-4 border-secondary p-6 shadow-[6px_6px_0px_0px_rgba(74,55,40,0.4)] rotate-1 relative">
+                    <div
+                        class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full shadow-md border-2 border-secondary z-10">
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-secondary flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">mark_email_unread</span>
+                        Meus Recadinhos
+                    </h3>
+                    <div id="message-list" class="flex flex-col gap-3">
+                        <!-- Note Item -->
+                        <div
+                            class="bg-surface border-2 border-outline-variant p-3 transform -rotate-2 shadow-sm hover:rotate-0 transition-transform cursor-pointer">
+                            <p class="font-body-md text-on-surface line-clamp-2">"Você estava linda dançando a
+                                quadrilha! Assinado: Seu fã número 1."</p>
+                            <span class="text-xs text-primary font-bold mt-2 block">De: Anônimo</span>
+                        </div>
+                        <!-- Note Item with Mimo -->
+                        <div
+                            class="bg-primary-fixed border-2 border-primary p-3 transform rotate-1 shadow-sm hover:rotate-0 transition-transform cursor-pointer">
+                            <div class="flex items-start justify-between">
+                                <p class="font-body-md text-on-surface line-clamp-2 pr-2">"Toma um doce pra adoçar a
+                                    noite!"</p>
+                                <span class="material-symbols-outlined text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">cake</span>
+                            </div>
+                            <span class="text-xs text-secondary font-bold mt-2 block">De: Joãozinho</span>
+                        </div>
+                    </div>
+                    <button id="note-count-button"
+                        class="w-full mt-4 py-2 border-2 border-secondary border-dashed text-secondary font-label-caps hover:bg-surface transition-colors">
+                        Ver Todos (5)
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mural Público: Recados do Coração (Marquee simulation) -->
+        <div
+            class="mt-8 bg-surface-container-highest border-y-4 border-primary py-4 relative overflow-hidden shadow-[0px_4px_0px_0px_rgba(74,55,40,0.2)]">
+            <div
+                class="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-surface-container-highest to-transparent z-10">
+            </div>
+            <div
+                class="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-surface-container-highest to-transparent z-10">
+            </div>
+            <div class="flex items-center gap-4 px-4 overflow-x-auto hide-scrollbar whitespace-nowrap">
+                <span
+                    class="bg-primary text-on-primary px-4 py-1 rounded-full font-label-caps text-label-caps shadow-sm shrink-0 border-2 border-inverse-surface flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm"
+                        style="font-variation-settings: 'FILL' 1;">campaign</span> MURAL PÚBLICO
+                </span>
+                <!-- Marquee Items -->
+                <span class="font-body-lg text-primary shrink-0 flex items-center gap-2">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    "Para a morena da barraca do beijo: me apaixonei!"
+                </span>
+                <span class="text-secondary shrink-0">•</span>
+                <span class="font-body-lg text-secondary shrink-0 flex items-center gap-2">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    "Luiz, você me deve um quentão!"
+                </span>
+                <span class="text-secondary shrink-0">•</span>
+                <span class="font-body-lg text-primary shrink-0 flex items-center gap-2">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    "A quadrilha do 3º ano foi a melhor!"
+                </span>
+                <span class="text-secondary shrink-0">•</span>
+                <span class="font-body-lg text-secondary shrink-0 flex items-center gap-2">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    "Procura-se o dono do chapéu de palha azul."
+                </span>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+    <!-- BottomNavBar -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-secondary border-t-4 border-on-secondary-container shadow-[0px_-4px_0px_0px_rgba(74,55,40,0.4)] md:hidden">
+        <a class="flex flex-col items-center justify-center text-on-secondary p-2 -rotate-1 hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors group"
+            href="inicio.html">
+            <span class="material-symbols-outlined group-hover:scale-110 transition-transform duration-150">home</span>
+            <span class="font-label-caps text-label-caps mt-1">Início</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-secondary p-2 -rotate-1 hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors group"
+            href="perfil.html">
+            <span class="material-symbols-outlined group-hover:scale-110 transition-transform duration-150">person</span>
+            <span class="font-label-caps text-label-caps mt-1">Meu Perfil</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-secondary p-2 -rotate-1 hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors group"
+            href="comida.html">
+            <span class="material-symbols-outlined group-hover:scale-110 transition-transform duration-150">restaurant</span>
+            <span class="font-label-caps text-label-caps mt-1">Comida</span>
+        </a>
+        <!-- ACTIVE NAVIGATION: Correio -->
+        <a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-lg p-2 rotate-1 hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors group scale-110 border-2 border-surface shadow-[2px_2px_0px_0px_rgba(74,55,40,0.8)]"
+            href="correio.html">
+            <span class="material-symbols-outlined group-hover:scale-110 transition-transform duration-150"
+                style="font-variation-settings: 'FILL' 1;">mail</span>
+            <span class="font-label-caps text-label-caps mt-1">Correio</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-secondary p-2 -rotate-1 hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors group"
+            href="jogos.html">
+            <span class="material-symbols-outlined group-hover:scale-110 transition-transform duration-150">storefront</span>
+            <span class="font-label-caps text-label-caps mt-1">Barracas</span>
+        </a>
+    </nav>
+</body>
+
+</html>
